@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Game Profile</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: aliceblue;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: navy;
+        }
+
+        button {
+            background: navy;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        div {
+            border: 1px solid navy;
+            width: 280px;
+            margin: 6px auto;
+            padding: 8px 12px;
+            text-align: left;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Game Profile</h1>
+    <button onclick="showProfile()">Show Profile</button>
+
+    <div>Name: <span id="name"></span></div>
+    <div>Score: <span id="score"></span></div>
+    <div>Top score: <span id="record"></span></div>
+    <div>Rank: <span id="rank"></span></div>
+    <div>Greetings: <span id="greetings"></span></div>
+    <div>Stars: <span id="stars"></span></div>
+    <div>Bonus Level: <span id="bonus"></span></div>
+    <div>Team Name: <span id="team"></span></div>
+
+    <script>
+
+        function showProfile() {
+            let name = "Charan";
+            let age = "12";
+            let dd,mm,yyyy = "31/08/2014";
+
+            let hour = new Date().getHours();
+            let greetings;
+            if (hour < 12) {
+                greetings = "Good Morning";
+            } else if (hour < 17) {
+                greetings = "Good Aftrenoon";
+            } else {
+                greetings = "Good Evening";
+            }
+
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("age").innerHTML = age;
+            document.getElementById("dd,mm,yyyy").innerHTML = dd/mm/yyyy;
+            document.getElementById("greetings").innerHTML = greetings;
+        }
+    </script>
+</body>
+
+</html>
